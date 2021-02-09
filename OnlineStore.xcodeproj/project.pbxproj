@@ -10,7 +10,6 @@
 		C969E38625D2A28300916D5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969E38525D2A28300916D5C /* AppDelegate.swift */; };
 		C969E38825D2A28300916D5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969E38725D2A28300916D5C /* SceneDelegate.swift */; };
 		C969E38A25D2A28300916D5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969E38925D2A28300916D5C /* ViewController.swift */; };
-		C969E38D25D2A28300916D5C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C969E38B25D2A28300916D5C /* Main.storyboard */; };
 		C969E38F25D2A28900916D5C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C969E38E25D2A28900916D5C /* Assets.xcassets */; };
 		C969E39225D2A28900916D5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C969E39025D2A28900916D5C /* LaunchScreen.storyboard */; };
 		C969E39D25D2A28A00916D5C /* OnlineStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969E39C25D2A28A00916D5C /* OnlineStoreTests.swift */; };
@@ -39,7 +38,6 @@
 		C969E38525D2A28300916D5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C969E38725D2A28300916D5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		C969E38925D2A28300916D5C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		C969E38C25D2A28300916D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C969E38E25D2A28900916D5C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C969E39125D2A28900916D5C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C969E39325D2A28900916D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -99,13 +97,12 @@
 		C969E38425D2A28300916D5C /* OnlineStore */ = {
 			isa = PBXGroup;
 			children = (
-				C969E38525D2A28300916D5C /* AppDelegate.swift */,
+				C969E3BB25D2AF6800916D5C /* App */,
+				C969E3C225D2AFC800916D5C /* Enviroments */,
+				C969E3C125D2AFB500916D5C /* Resources */,
+				C969E3C025D2AFA800916D5C /* Utils */,
 				C969E38725D2A28300916D5C /* SceneDelegate.swift */,
 				C969E38925D2A28300916D5C /* ViewController.swift */,
-				C969E38B25D2A28300916D5C /* Main.storyboard */,
-				C969E38E25D2A28900916D5C /* Assets.xcassets */,
-				C969E39025D2A28900916D5C /* LaunchScreen.storyboard */,
-				C969E39325D2A28900916D5C /* Info.plist */,
 			);
 			path = OnlineStore;
 			sourceTree = "<group>";
@@ -126,6 +123,70 @@
 				C969E3A925D2A28A00916D5C /* Info.plist */,
 			);
 			path = OnlineStoreUITests;
+			sourceTree = "<group>";
+		};
+		C969E3BB25D2AF6800916D5C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C969E38525D2A28300916D5C /* AppDelegate.swift */,
+				C969E3BF25D2AF9C00916D5C /* Flows */,
+				C969E3BE25D2AF9200916D5C /* Assembly */,
+				C969E3BD25D2AF8800916D5C /* Entity */,
+				C969E3BC25D2AF7600916D5C /* BusinessLogic */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C969E3BC25D2AF7600916D5C /* BusinessLogic */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = BusinessLogic;
+			sourceTree = "<group>";
+		};
+		C969E3BD25D2AF8800916D5C /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		C969E3BE25D2AF9200916D5C /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		C969E3BF25D2AF9C00916D5C /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		C969E3C025D2AFA800916D5C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C969E3C125D2AFB500916D5C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				C969E39025D2A28900916D5C /* LaunchScreen.storyboard */,
+				C969E38E25D2A28900916D5C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		C969E3C225D2AFC800916D5C /* Enviroments */ = {
+			isa = PBXGroup;
+			children = (
+				C969E39325D2A28900916D5C /* Info.plist */,
+			);
+			path = Enviroments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,7 +294,6 @@
 			files = (
 				C969E39225D2A28900916D5C /* LaunchScreen.storyboard in Resources */,
 				C969E38F25D2A28900916D5C /* Assets.xcassets in Resources */,
-				C969E38D25D2A28300916D5C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,14 +356,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		C969E38B25D2A28300916D5C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C969E38C25D2A28300916D5C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		C969E39025D2A28900916D5C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -438,7 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F3F8R7TSF;
-				INFOPLIST_FILE = OnlineStore/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OnlineStore/Enviroments/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -457,7 +509,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 2F3F8R7TSF;
-				INFOPLIST_FILE = OnlineStore/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/OnlineStore/Enviroments/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
