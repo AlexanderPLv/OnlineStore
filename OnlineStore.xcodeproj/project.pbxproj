@@ -14,15 +14,21 @@
 		C969E39225D2A28900916D5C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C969E39025D2A28900916D5C /* LaunchScreen.storyboard */; };
 		C969E39D25D2A28A00916D5C /* OnlineStoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969E39C25D2A28A00916D5C /* OnlineStoreTests.swift */; };
 		C969E3A825D2A28A00916D5C /* OnlineStoreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C969E3A725D2A28A00916D5C /* OnlineStoreUITests.swift */; };
+		C96A5B9125DBCDAA0020B120 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5B9025DBCDAA0020B120 /* AbstractRequestFactory.swift */; };
+		C96AFC7B25DE6BD200161374 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFC7A25DE6BD200161374 /* NetworkingError.swift */; };
+		C96AFC9725DE90E900161374 /* DecodableSerialazer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFC9625DE90E900161374 /* DecodableSerialazer.swift */; };
+		C96AFCA825DEB96000161374 /* SerializerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFCA725DEB96000161374 /* SerializerFactory.swift */; };
+		C96AFCB525DEBF6000161374 /* SignUpRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFCB425DEBF6000161374 /* SignUpRequestFactory.swift */; };
+		C96AFCBA25DEBF8800161374 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFCB925DEBF8800161374 /* SignUp.swift */; };
+		C96AFCC525DEC55600161374 /* LogoutJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFCC425DEC55600161374 /* LogoutJson.swift */; };
+		C96BE5C425DD59B300B6325E /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5C325DD59B300B6325E /* RegisterUser.swift */; };
+		C96BE5C925DD5AB600B6325E /* SignUpResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5C825DD5AB600B6325E /* SignUpResource.swift */; };
+		C977F51E25DA71DB0045ABEF /* SignInResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977F51D25DA71DB0045ABEF /* SignInResource.swift */; };
 		C9D95A5525D6756F00A99E48 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A5425D6756F00A99E48 /* LoginResult.swift */; };
 		C9D95A5A25D6757A00A99E48 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A5925D6757A00A99E48 /* User.swift */; };
-		C9D95A6025D6762800A99E48 /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A5F25D6762800A99E48 /* AbstractErrorParser.swift */; };
-		C9D95A6525D6765700A99E48 /* ErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A6425D6765700A99E48 /* ErrorParser.swift */; };
-		C9D95A6A25D6781000A99E48 /* DataRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A6925D6781000A99E48 /* DataRequest.swift */; };
-		C9D95A6F25D6788800A99E48 /* CustomDecodableSerializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A6E25D6788800A99E48 /* CustomDecodableSerializer.swift */; };
 		C9D95A7425D679F100A99E48 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A7325D679F100A99E48 /* RequestRouter.swift */; };
-		C9D95A7A25D67A5B00A99E48 /* AuthRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A7925D67A5B00A99E48 /* AuthRequestFactory.swift */; };
-		C9D95A8225D67A8800A99E48 /* Auth.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A8125D67A8800A99E48 /* Auth.swift */; };
+		C9D95A7A25D67A5B00A99E48 /* SignInRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A7925D67A5B00A99E48 /* SignInRequestFactory.swift */; };
+		C9D95A8225D67A8800A99E48 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A8125D67A8800A99E48 /* SignIn.swift */; };
 		C9D95A8725D67C1100A99E48 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A8625D67C1100A99E48 /* RequestFactory.swift */; };
 /* End PBXBuildFile section */
 
@@ -57,15 +63,21 @@
 		C969E3A325D2A28A00916D5C /* OnlineStoreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OnlineStoreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C969E3A725D2A28A00916D5C /* OnlineStoreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineStoreUITests.swift; sourceTree = "<group>"; };
 		C969E3A925D2A28A00916D5C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C96A5B9025DBCDAA0020B120 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
+		C96AFC7A25DE6BD200161374 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
+		C96AFC9625DE90E900161374 /* DecodableSerialazer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableSerialazer.swift; sourceTree = "<group>"; };
+		C96AFCA725DEB96000161374 /* SerializerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerFactory.swift; sourceTree = "<group>"; };
+		C96AFCB425DEBF6000161374 /* SignUpRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestFactory.swift; sourceTree = "<group>"; };
+		C96AFCB925DEBF8800161374 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
+		C96AFCC425DEC55600161374 /* LogoutJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutJson.swift; sourceTree = "<group>"; };
+		C96BE5C325DD59B300B6325E /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
+		C96BE5C825DD5AB600B6325E /* SignUpResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResource.swift; sourceTree = "<group>"; };
+		C977F51D25DA71DB0045ABEF /* SignInResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResource.swift; sourceTree = "<group>"; };
 		C9D95A5425D6756F00A99E48 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		C9D95A5925D6757A00A99E48 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C9D95A5F25D6762800A99E48 /* AbstractErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractErrorParser.swift; sourceTree = "<group>"; };
-		C9D95A6425D6765700A99E48 /* ErrorParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorParser.swift; sourceTree = "<group>"; };
-		C9D95A6925D6781000A99E48 /* DataRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataRequest.swift; sourceTree = "<group>"; };
-		C9D95A6E25D6788800A99E48 /* CustomDecodableSerializer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDecodableSerializer.swift; sourceTree = "<group>"; };
 		C9D95A7325D679F100A99E48 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
-		C9D95A7925D67A5B00A99E48 /* AuthRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRequestFactory.swift; sourceTree = "<group>"; };
-		C9D95A8125D67A8800A99E48 /* Auth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Auth.swift; sourceTree = "<group>"; };
+		C9D95A7925D67A5B00A99E48 /* SignInRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequestFactory.swift; sourceTree = "<group>"; };
+		C9D95A8125D67A8800A99E48 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		C9D95A8625D67C1100A99E48 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +182,8 @@
 			children = (
 				C9D95A5425D6756F00A99E48 /* LoginResult.swift */,
 				C9D95A5925D6757A00A99E48 /* User.swift */,
+				C96BE5C325DD59B300B6325E /* RegisterUser.swift */,
+				C96AFCC425DEC55600161374 /* LogoutJson.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -213,14 +227,83 @@
 			path = Enviroments;
 			sourceTree = "<group>";
 		};
+		C96AFCA025DEB47500161374 /* Serializer */ = {
+			isa = PBXGroup;
+			children = (
+				C96AFC9625DE90E900161374 /* DecodableSerialazer.swift */,
+				C96AFCA725DEB96000161374 /* SerializerFactory.swift */,
+			);
+			path = Serializer;
+			sourceTree = "<group>";
+		};
+		C96AFCAC25DEBE5300161374 /* NetworkError */ = {
+			isa = PBXGroup;
+			children = (
+				C96AFC7A25DE6BD200161374 /* NetworkingError.swift */,
+			);
+			path = NetworkError;
+			sourceTree = "<group>";
+		};
+		C96AFCB025DEBE7700161374 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C9D95A7325D679F100A99E48 /* RequestRouter.swift */,
+				C96A5B9025DBCDAA0020B120 /* AbstractRequestFactory.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		C96AFCBE25DEBF9C00161374 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				C96AFCB425DEBF6000161374 /* SignUpRequestFactory.swift */,
+				C96AFCB925DEBF8800161374 /* SignUp.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		C96AFCBF25DEC04200161374 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				C9D95A7925D67A5B00A99E48 /* SignInRequestFactory.swift */,
+				C9D95A8125D67A8800A99E48 /* SignIn.swift */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
+		C96AFCC325DEC4D000161374 /* RequestFactory */ = {
+			isa = PBXGroup;
+			children = (
+				C9D95A8625D67C1100A99E48 /* RequestFactory.swift */,
+			);
+			path = RequestFactory;
+			sourceTree = "<group>";
+		};
+		C96BE5CD25DD5EDA00B6325E /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				C96AFCBF25DEC04200161374 /* SignIn */,
+				C96AFCBE25DEBF9C00161374 /* SignUp */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		C977F51C25DA71B50045ABEF /* EndPoints */ = {
+			isa = PBXGroup;
+			children = (
+				C977F51D25DA71DB0045ABEF /* SignInResource.swift */,
+				C96BE5C825DD5AB600B6325E /* SignUpResource.swift */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
 		C9D95A5E25D675D300A99E48 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C9D95A5F25D6762800A99E48 /* AbstractErrorParser.swift */,
-				C9D95A6425D6765700A99E48 /* ErrorParser.swift */,
-				C9D95A6925D6781000A99E48 /* DataRequest.swift */,
-				C9D95A6E25D6788800A99E48 /* CustomDecodableSerializer.swift */,
-				C9D95A7325D679F100A99E48 /* RequestRouter.swift */,
+				C977F51C25DA71B50045ABEF /* EndPoints */,
+				C96AFCB025DEBE7700161374 /* Protocols */,
+				C96AFCAC25DEBE5300161374 /* NetworkError */,
+				C96AFCA025DEB47500161374 /* Serializer */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -228,9 +311,8 @@
 		C9D95A7825D67A3100A99E48 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C9D95A7925D67A5B00A99E48 /* AuthRequestFactory.swift */,
-				C9D95A8625D67C1100A99E48 /* RequestFactory.swift */,
-				C9D95A8125D67A8800A99E48 /* Auth.swift */,
+				C96AFCC325DEC4D000161374 /* RequestFactory */,
+				C96BE5CD25DD5EDA00B6325E /* Auth */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -364,19 +446,25 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C9D95A7A25D67A5B00A99E48 /* AuthRequestFactory.swift in Sources */,
+				C9D95A7A25D67A5B00A99E48 /* SignInRequestFactory.swift in Sources */,
 				C9D95A5525D6756F00A99E48 /* LoginResult.swift in Sources */,
 				C969E38A25D2A28300916D5C /* ViewController.swift in Sources */,
+				C96AFCB525DEBF6000161374 /* SignUpRequestFactory.swift in Sources */,
 				C9D95A8725D67C1100A99E48 /* RequestFactory.swift in Sources */,
+				C96AFCA825DEB96000161374 /* SerializerFactory.swift in Sources */,
 				C969E38625D2A28300916D5C /* AppDelegate.swift in Sources */,
-				C9D95A6025D6762800A99E48 /* AbstractErrorParser.swift in Sources */,
-				C9D95A6F25D6788800A99E48 /* CustomDecodableSerializer.swift in Sources */,
-				C9D95A6525D6765700A99E48 /* ErrorParser.swift in Sources */,
+				C96AFCBA25DEBF8800161374 /* SignUp.swift in Sources */,
 				C9D95A7425D679F100A99E48 /* RequestRouter.swift in Sources */,
+				C96AFC9725DE90E900161374 /* DecodableSerialazer.swift in Sources */,
+				C96BE5C925DD5AB600B6325E /* SignUpResource.swift in Sources */,
 				C9D95A5A25D6757A00A99E48 /* User.swift in Sources */,
+				C96A5B9125DBCDAA0020B120 /* AbstractRequestFactory.swift in Sources */,
 				C969E38825D2A28300916D5C /* SceneDelegate.swift in Sources */,
-				C9D95A6A25D6781000A99E48 /* DataRequest.swift in Sources */,
-				C9D95A8225D67A8800A99E48 /* Auth.swift in Sources */,
+				C977F51E25DA71DB0045ABEF /* SignInResource.swift in Sources */,
+				C96BE5C425DD59B300B6325E /* RegisterUser.swift in Sources */,
+				C9D95A8225D67A8800A99E48 /* SignIn.swift in Sources */,
+				C96AFCC525DEC55600161374 /* LogoutJson.swift in Sources */,
+				C96AFC7B25DE6BD200161374 /* NetworkingError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
