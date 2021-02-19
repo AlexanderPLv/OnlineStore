@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct LogoutJSON {
+struct IsSuccess: Decodable {
     let result: Int
 }

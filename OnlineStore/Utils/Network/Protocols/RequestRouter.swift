@@ -42,6 +42,8 @@ extension BaseURL {
 enum Path {
     case auth
     case register
+    case logout
+    case changeUserData
 }
 extension Path {
     var path: String {
@@ -50,6 +52,10 @@ extension Path {
             return "/GeekBrainsTutorial/online-store-api/master/responses/login.json"
         case .register:
             return "/GeekBrainsTutorial/online-store-api/master/responses/registerUser.json"
+        case .logout:
+            return "/GeekBrainsTutorial/online-store-api/master/responses/logout.json"
+        case .changeUserData:
+            return "/GeekBrainsTutorial/online-store-api/master/responses/changeUserData.json"
         }
     }
 }

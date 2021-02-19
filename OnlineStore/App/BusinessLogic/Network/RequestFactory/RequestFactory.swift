@@ -26,5 +26,14 @@ class RequestFactory {
         return SignUp(serializer: serializer, sessionManager: commonSession)
     }
     
+    func makeLogoutRequestFactory() -> LogoutRequestFactory {
+        let serializer = DecodableSerializer<IsSuccess>()
+        return Logout(serializer: serializer, sessionManager: commonSession)
+    }
+    
+    func makeChangeUserFactory() -> ChangeUserFactory {
+        let serializer = DecodableSerializer<IsSuccess>()
+        return ChangeUser(serializer: serializer, sessionManager: commonSession)
+    }
     
 }
