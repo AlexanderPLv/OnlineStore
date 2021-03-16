@@ -11,6 +11,8 @@ enum NetworkingError: String, Error {
     case invalidRequest = "invalid request"
     case badData = "bad data"
     case parsingError = "parsing error"
+    case encodingFailed = "Parameter encoding failed."
+    case parametersNil = "Parameters were nil."
 }
 extension NetworkingError: LocalizedError {
     var errorDescription: String? { return NSLocalizedString(rawValue, comment: "")}

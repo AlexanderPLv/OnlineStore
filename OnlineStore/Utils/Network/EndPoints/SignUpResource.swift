@@ -7,24 +7,28 @@
 
 import Foundation
 
-struct SignUpResource: RequestRouter {
+struct SignUpResource: EndPointType {
+    
+    typealias ModelType = RegisterUser
     var host      : BaseURL = .apiRequest
-    var path    : Path = .signUp
-    let idUser    : String
+    var path      : Path = .signUp
+    let idUser    : Int
     let userName  : String
     let password  : String
     let email     : String
     let gender    : String
     let creditCard: String
     let bio       : String
-    var fields    : [URLQueryItem]  {
-        [ URLQueryItem(name: "id_user", value: idUser),
-          URLQueryItem(name: "username", value: userName),
-          URLQueryItem(name: "password", value: password),
-          URLQueryItem(name: "email", value: email),
-          URLQueryItem(name: "gender", value: gender),
-          URLQueryItem(name: "credit_card", value: creditCard),
-          URLQueryItem(name: "bio", value: bio)
+    var httpMethod: HTTPMethod = .post
+    var parameters: Parameters {
+        [ "id_user" : idUser,
+          "username": userName,
+          "password": password,
+          "email": email,
+          "gender": gender,
+          "credit_card": creditCard,
+          "bio": bio
         ]
     }
+    
 }

@@ -17,7 +17,6 @@
 		C96A5B9125DBCDAA0020B120 /* AbstractRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96A5B9025DBCDAA0020B120 /* AbstractRequestFactory.swift */; };
 		C96AFC7B25DE6BD200161374 /* NetworkingError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFC7A25DE6BD200161374 /* NetworkingError.swift */; };
 		C96AFC9725DE90E900161374 /* DecodableSerialazer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFC9625DE90E900161374 /* DecodableSerialazer.swift */; };
-		C96AFCA825DEB96000161374 /* SerializerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFCA725DEB96000161374 /* SerializerFactory.swift */; };
 		C96AFCB525DEBF6000161374 /* SignUpRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFCB425DEBF6000161374 /* SignUpRequestFactory.swift */; };
 		C96AFCBA25DEBF8800161374 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFCB925DEBF8800161374 /* SignUp.swift */; };
 		C96AFCC525DEC55600161374 /* IsSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96AFCC425DEC55600161374 /* IsSuccess.swift */; };
@@ -32,10 +31,14 @@
 		C98A574D25DFAEE6007456F6 /* ChangeUserResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A574C25DFAEE6007456F6 /* ChangeUserResource.swift */; };
 		C9D95A5525D6756F00A99E48 /* LoginResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A5425D6756F00A99E48 /* LoginResult.swift */; };
 		C9D95A5A25D6757A00A99E48 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A5925D6757A00A99E48 /* User.swift */; };
-		C9D95A7425D679F100A99E48 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A7325D679F100A99E48 /* RequestRouter.swift */; };
+		C9D95A7425D679F100A99E48 /* EndPointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A7325D679F100A99E48 /* EndPointType.swift */; };
 		C9D95A7A25D67A5B00A99E48 /* SignInRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A7925D67A5B00A99E48 /* SignInRequestFactory.swift */; };
 		C9D95A8225D67A8800A99E48 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A8125D67A8800A99E48 /* SignIn.swift */; };
 		C9D95A8725D67C1100A99E48 /* RequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9D95A8625D67C1100A99E48 /* RequestFactory.swift */; };
+		C9EB7F652600E57200990EA0 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EB7F642600E57200990EA0 /* HTTPMethod.swift */; };
+		C9EB7F712600EBB400990EA0 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EB7F702600EBB400990EA0 /* ParameterEncoding.swift */; };
+		C9EB7F762600EDAB00990EA0 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EB7F752600EDAB00990EA0 /* JSONParameterEncoder.swift */; };
+		C9EB7F7E260117D000990EA0 /* HTTPTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9EB7F7D260117D000990EA0 /* HTTPTask.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,7 +75,6 @@
 		C96A5B9025DBCDAA0020B120 /* AbstractRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbstractRequestFactory.swift; sourceTree = "<group>"; };
 		C96AFC7A25DE6BD200161374 /* NetworkingError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkingError.swift; sourceTree = "<group>"; };
 		C96AFC9625DE90E900161374 /* DecodableSerialazer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DecodableSerialazer.swift; sourceTree = "<group>"; };
-		C96AFCA725DEB96000161374 /* SerializerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerializerFactory.swift; sourceTree = "<group>"; };
 		C96AFCB425DEBF6000161374 /* SignUpRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpRequestFactory.swift; sourceTree = "<group>"; };
 		C96AFCB925DEBF8800161374 /* SignUp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		C96AFCC425DEC55600161374 /* IsSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsSuccess.swift; sourceTree = "<group>"; };
@@ -87,10 +89,14 @@
 		C98A574C25DFAEE6007456F6 /* ChangeUserResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeUserResource.swift; sourceTree = "<group>"; };
 		C9D95A5425D6756F00A99E48 /* LoginResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginResult.swift; sourceTree = "<group>"; };
 		C9D95A5925D6757A00A99E48 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		C9D95A7325D679F100A99E48 /* RequestRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		C9D95A7325D679F100A99E48 /* EndPointType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPointType.swift; sourceTree = "<group>"; };
 		C9D95A7925D67A5B00A99E48 /* SignInRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInRequestFactory.swift; sourceTree = "<group>"; };
 		C9D95A8125D67A8800A99E48 /* SignIn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
 		C9D95A8625D67C1100A99E48 /* RequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFactory.swift; sourceTree = "<group>"; };
+		C9EB7F642600E57200990EA0 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
+		C9EB7F702600EBB400990EA0 /* ParameterEncoding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
+		C9EB7F752600EDAB00990EA0 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
+		C9EB7F7D260117D000990EA0 /* HTTPTask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPTask.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -243,7 +249,6 @@
 			isa = PBXGroup;
 			children = (
 				C96AFC9625DE90E900161374 /* DecodableSerialazer.swift */,
-				C96AFCA725DEB96000161374 /* SerializerFactory.swift */,
 			);
 			path = Serializer;
 			sourceTree = "<group>";
@@ -256,13 +261,15 @@
 			path = NetworkError;
 			sourceTree = "<group>";
 		};
-		C96AFCB025DEBE7700161374 /* Protocols */ = {
+		C96AFCB025DEBE7700161374 /* Service */ = {
 			isa = PBXGroup;
 			children = (
-				C9D95A7325D679F100A99E48 /* RequestRouter.swift */,
+				C9D95A7325D679F100A99E48 /* EndPointType.swift */,
 				C96A5B9025DBCDAA0020B120 /* AbstractRequestFactory.swift */,
+				C9EB7F642600E57200990EA0 /* HTTPMethod.swift */,
+				C9EB7F7D260117D000990EA0 /* HTTPTask.swift */,
 			);
-			path = Protocols;
+			path = Service;
 			sourceTree = "<group>";
 		};
 		C96AFCBE25DEBF9C00161374 /* SignUp */ = {
@@ -332,8 +339,9 @@
 		C9D95A5E25D675D300A99E48 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				C96AFCB025DEBE7700161374 /* Service */,
+				C9EB7F692600E5CD00990EA0 /* Encoding */,
 				C977F51C25DA71B50045ABEF /* EndPoints */,
-				C96AFCB025DEBE7700161374 /* Protocols */,
 				C96AFCAC25DEBE5300161374 /* NetworkError */,
 				C96AFCA025DEB47500161374 /* Serializer */,
 			);
@@ -349,6 +357,15 @@
 				C96BE5CD25DD5EDA00B6325E /* Auth */,
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		C9EB7F692600E5CD00990EA0 /* Encoding */ = {
+			isa = PBXGroup;
+			children = (
+				C9EB7F702600EBB400990EA0 /* ParameterEncoding.swift */,
+				C9EB7F752600EDAB00990EA0 /* JSONParameterEncoder.swift */,
+			);
+			path = Encoding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -480,16 +497,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9EB7F7E260117D000990EA0 /* HTTPTask.swift in Sources */,
 				C9D95A7A25D67A5B00A99E48 /* SignInRequestFactory.swift in Sources */,
 				C9D95A5525D6756F00A99E48 /* LoginResult.swift in Sources */,
 				C98A574325DFAE3D007456F6 /* ChangeUser.swift in Sources */,
 				C969E38A25D2A28300916D5C /* ViewController.swift in Sources */,
 				C96AFCB525DEBF6000161374 /* SignUpRequestFactory.swift in Sources */,
 				C9D95A8725D67C1100A99E48 /* RequestFactory.swift in Sources */,
-				C96AFCA825DEB96000161374 /* SerializerFactory.swift in Sources */,
 				C969E38625D2A28300916D5C /* AppDelegate.swift in Sources */,
 				C96AFCBA25DEBF8800161374 /* SignUp.swift in Sources */,
-				C9D95A7425D679F100A99E48 /* RequestRouter.swift in Sources */,
+				C9EB7F712600EBB400990EA0 /* ParameterEncoding.swift in Sources */,
+				C9D95A7425D679F100A99E48 /* EndPointType.swift in Sources */,
+				C9EB7F652600E57200990EA0 /* HTTPMethod.swift in Sources */,
 				C98A573825DFA583007456F6 /* LogoutRequestFactory.swift in Sources */,
 				C96AFC9725DE90E900161374 /* DecodableSerialazer.swift in Sources */,
 				C96BE5C925DD5AB600B6325E /* SignUpResource.swift in Sources */,
@@ -502,6 +521,7 @@
 				C96BE5C425DD59B300B6325E /* RegisterUser.swift in Sources */,
 				C9D95A8225D67A8800A99E48 /* SignIn.swift in Sources */,
 				C98A574D25DFAEE6007456F6 /* ChangeUserResource.swift in Sources */,
+				C9EB7F762600EDAB00990EA0 /* JSONParameterEncoder.swift in Sources */,
 				C96AFCC525DEC55600161374 /* IsSuccess.swift in Sources */,
 				C96AFC7B25DE6BD200161374 /* NetworkingError.swift in Sources */,
 				C98A573D25DFA817007456F6 /* LogoutResource.swift in Sources */,

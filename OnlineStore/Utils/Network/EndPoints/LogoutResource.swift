@@ -7,10 +7,14 @@
 
 import Foundation
 
-struct LogoutResouce: RequestRouter {
+struct LogoutResouce: EndPointType {
+    typealias ModelType = IsSuccess
+    var httpMethod: HTTPMethod = .post
+    
     var host  : BaseURL = .apiRequest
     var path: Path = .logout
     var userId: String
+    var parameters: Parameters = [:]
     var fields: [URLQueryItem] {
         [URLQueryItem(name: "id_user", value: userId)]
     }

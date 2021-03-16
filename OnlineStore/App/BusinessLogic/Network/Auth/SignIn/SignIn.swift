@@ -10,13 +10,14 @@ import Foundation
 
 
 class SignIn {
-    typealias ModelType = LoginResult
     let sessionManager: URLSession
-    let serializer: DecodableSerializer<ModelType>
-    var url: URL?
+    let serializer: DecodableSerializer<EndPoint.ModelType>
+    let encoder: ParameterEncoder
     init(
-        serializer: DecodableSerializer<ModelType>,
+        serializer: DecodableSerializer<EndPoint.ModelType>,
+        encoder: ParameterEncoder,
         sessionManager: URLSession) {
+        self.encoder = encoder
         self.serializer = serializer
         self.sessionManager = sessionManager
     }
@@ -24,16 +25,16 @@ class SignIn {
 
 extension SignIn: AbstractRequestFactory {
     
-    func request(withCompletion completion: @escaping (Result<ModelType, NetworkingError>) -> Void) {
-        guard let url = url else { return }
-        request(url, withCompletion: completion)
-    }
+    typealias EndPoint = SignInResource
+    
+    
+    func request(withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {}
 }
 
 extension SignIn: SignInRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (Result<LoginResult, NetworkingError>) -> Void) {
-        let resource = SignInResource(login: userName, password: password)
-        request(resource.url, withCompletion: completionHandler)
+    func login(userName: String, password: String, completionHandler: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
+        let route = SignInResource(login: userName, password: password)
+        request(route, parameters: route.parameters, withCompletion: completionHandler)
     }
     
 }

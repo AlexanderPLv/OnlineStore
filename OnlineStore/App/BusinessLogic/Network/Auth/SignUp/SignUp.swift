@@ -8,38 +8,33 @@
 import Foundation
 
 class SignUp {
-    typealias ModelType = RegisterUser
+    
     let sessionManager: URLSession
-    let serializer: DecodableSerializer<ModelType>
-    var url: URL?
+    let serializer: DecodableSerializer<EndPoint.ModelType>
+    let encoder: ParameterEncoder
     init(
-        serializer: DecodableSerializer<ModelType>,
+        serializer: DecodableSerializer<EndPoint.ModelType>,
+        encoder: ParameterEncoder,
         sessionManager: URLSession) {
         self.serializer = serializer
+        self.encoder = encoder
         self.sessionManager = sessionManager
     }
 }
 
 extension SignUp: AbstractRequestFactory {
-    
-    func request(withCompletion completion: @escaping (Result<ModelType, NetworkingError>) -> Void) {
-        guard let url = url else { return }
-        request(url, withCompletion: completion)
-    }
+    typealias EndPoint = SignUpResource
+    func request(withCompletion completion: @escaping (Result<RegisterUser, NetworkingError>) -> Void) { }
 }
 
 extension SignUp: SignUpRequestFactory {
-    func signUp(idUser: String, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (Result<RegisterUser, NetworkingError>) -> Void) {
-        let resource = SignUpResource(idUser: idUser,
-                                      userName: userName,
-                                      password: password,
-                                      email: email,
-                                      gender: gender,
-                                      creditCard: creditCard,
-                                      bio: bio)
+    func signUp(idUser: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
         
-        print(resource.url)
-        request(resource.url, withCompletion: completionHandler)
+        let route = SignUpResource(idUser: idUser, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+
+        request(route, parameters: route.parameters, withCompletion: completionHandler)
     }
 
+    
+    
 }

@@ -8,7 +8,7 @@
 import Foundation
 
 protocol SignUpRequestFactory {
-    func signUp(idUser: String,
+    func signUp(idUser: Int,
                 userName: String,
                 password: String,
                 email: String,

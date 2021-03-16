@@ -7,21 +7,21 @@
 
 import Foundation
 
-protocol RequestRouter {
-    
-    var host: BaseURL { get }
-    var path: Path { get }
-    var fields: [URLQueryItem] { get }
+protocol EndPointType {
+    associatedtype ModelType: Decodable
+    var host      : BaseURL    { get }
+    var path      : Path       { get }
+    var httpMethod: HTTPMethod { get }
+    var parameters: Parameters { get }
 }
 
-extension RequestRouter {
+extension EndPointType {
     
     var url: URL {
         var components = URLComponents()
         components.scheme = "https"
         components.host = host.baseURL
         components.path = path.path
-        components.queryItems = fields
         return components.url!
     }
     

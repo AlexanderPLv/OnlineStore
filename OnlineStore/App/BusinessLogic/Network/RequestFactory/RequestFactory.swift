@@ -18,22 +18,24 @@ class RequestFactory {
     
     func makeSignInRequestFactory() -> SignInRequestFactory {
         let serializer = DecodableSerializer<LoginResult>()
-        return SignIn(serializer: serializer, sessionManager: commonSession)
+        let encoder = JSONParameterEncoder()
+        return SignIn(serializer: serializer, encoder: encoder, sessionManager: commonSession)
     }
     
     func makeSignUpRequestFactory() -> SignUpRequestFactory {
         let serializer = DecodableSerializer<RegisterUser>()
-        return SignUp(serializer: serializer, sessionManager: commonSession)
+        let encoder = JSONParameterEncoder()
+        return SignUp(serializer: serializer, encoder: encoder, sessionManager: commonSession)
     }
     
-    func makeLogoutRequestFactory() -> LogoutRequestFactory {
-        let serializer = DecodableSerializer<IsSuccess>()
-        return Logout(serializer: serializer, sessionManager: commonSession)
-    }
+//    func makeLogoutRequestFactory() -> LogoutRequestFactory {
+//        let serializer = DecodableSerializer<IsSuccess>()
+//        return Logout(serializer: serializer, sessionManager: commonSession)
+//    }
     
-    func makeChangeUserFactory() -> ChangeUserFactory {
-        let serializer = DecodableSerializer<IsSuccess>()
-        return ChangeUser(serializer: serializer, sessionManager: commonSession)
-    }
-    
+//    func makeChangeUserFactory() -> ChangeUserFactory {
+//        let serializer = DecodableSerializer<IsSuccess>()
+//        return ChangeUser(serializer: serializer, sessionManager: commonSession)
+//    }
+//
 }

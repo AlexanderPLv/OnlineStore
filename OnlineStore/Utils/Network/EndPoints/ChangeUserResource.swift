@@ -7,7 +7,10 @@
 
 import Foundation
 
-struct ChangeUserResource: RequestRouter {
+struct ChangeUserResource: EndPointType {
+    typealias ModelType = IsSuccess
+    var httpMethod: HTTPMethod = .post
+    
     let host: BaseURL = .apiRequest
     let path: Path = .changeUserData
     let idUser: String
@@ -17,6 +20,7 @@ struct ChangeUserResource: RequestRouter {
     let gender: String
     let creditCard: String
     let bio: String
+    var parameters: Parameters = [:]
     var fields: [URLQueryItem] {
         [
             URLQueryItem(name: "id_user", value: idUser),

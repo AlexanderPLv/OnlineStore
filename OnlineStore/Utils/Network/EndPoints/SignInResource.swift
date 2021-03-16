@@ -7,14 +7,18 @@
 
 import Foundation
 
-struct SignInResource: RequestRouter {
-    var host     : BaseURL = .apiRequest
-    var path   : Path = .signIn
-    let login    : String
-    let password : String
-    var fields   : [URLQueryItem]  {
-        [ URLQueryItem(name: "login", value: login),
-          URLQueryItem(name: "password", value: password)]
+struct SignInResource: EndPointType {
+    typealias ModelType = LoginResult
+    var host      : BaseURL = .apiRequest
+    var path      : Path = .signIn
+    let login     : String
+    let password  : String
+    var httpMethod: HTTPMethod = .post
+    var parameters: Parameters {
+        [
+            "login": login,
+            "password": password
+        ]
     }
     
 }
