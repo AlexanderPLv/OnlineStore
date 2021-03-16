@@ -9,5 +9,6 @@ import Foundation
 
 struct RegisterUser: Decodable {
     let result: Int
-    let userMessage: String
+    let userMessage: String?
+    let errorMessage: String?
 }

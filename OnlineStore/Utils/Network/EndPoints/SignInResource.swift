@@ -9,7 +9,7 @@ import Foundation
 
 struct SignInResource: RequestRouter {
     var host     : BaseURL = .apiRequest
-    var method   : Path = .auth
+    var path   : Path = .signIn
     let login    : String
     let password : String
     var fields   : [URLQueryItem]  {

@@ -10,7 +10,7 @@ import Foundation
 protocol RequestRouter {
     
     var host: BaseURL { get }
-    var method: Path { get }
+    var path: Path { get }
     var fields: [URLQueryItem] { get }
 }
 
@@ -20,7 +20,7 @@ extension RequestRouter {
         var components = URLComponents()
         components.scheme = "https"
         components.host = host.baseURL
-        components.path = method.path
+        components.path = path.path
         components.queryItems = fields
         return components.url!
     }
@@ -34,28 +34,28 @@ extension BaseURL {
     var baseURL: String {
         switch self {
         case .apiRequest:
-            return "raw.githubusercontent.com"
+            return "morning-crag-27614.herokuapp.com"
         }
     }
 }
 
 enum Path {
-    case auth
-    case register
+    case signIn
+    case signUp
     case logout
     case changeUserData
 }
 extension Path {
     var path: String {
         switch self {
-        case .auth:
-            return "/GeekBrainsTutorial/online-store-api/master/responses/login.json"
-        case .register:
-            return "/GeekBrainsTutorial/online-store-api/master/responses/registerUser.json"
+        case .signIn:
+            return "/signIn"
+        case .signUp:
+            return "/signUp"
         case .logout:
-            return "/GeekBrainsTutorial/online-store-api/master/responses/logout.json"
+            return "/logout"
         case .changeUserData:
-            return "/GeekBrainsTutorial/online-store-api/master/responses/changeUserData.json"
+            return "/changeUserData"
         }
     }
 }

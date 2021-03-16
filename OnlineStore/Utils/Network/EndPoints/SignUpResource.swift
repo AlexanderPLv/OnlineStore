@@ -9,7 +9,7 @@ import Foundation
 
 struct SignUpResource: RequestRouter {
     var host      : BaseURL = .apiRequest
-    var method    : Path = .register
+    var path    : Path = .signUp
     let idUser    : String
     let userName  : String
     let password  : String

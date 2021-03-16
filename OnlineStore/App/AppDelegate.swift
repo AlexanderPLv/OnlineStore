@@ -14,15 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let signIn = requestFactory.makeSignInRequestFactory()
-        signIn.login(userName: "Somebody", password: "mypassword") { (response) in
-            switch response {
-            case .success(let login):
-                print(login)
-            case .failure(let error):
-                print(error)
-            }
-        }
+//        let signIn = requestFactory.makeSignInRequestFactory()
+//        signIn.login(userName: "Somebody", password: "mypassword") { (response) in
+//            switch response {
+//            case .success(let login):
+//                print(login)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
         
         let signUp = requestFactory.makeSignUpRequestFactory()
         signUp.signUp(idUser: "123", userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { (response) in
@@ -30,30 +30,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             case .success(let signUp):
                 print(signUp)
             case .failure(let error):
-                print(error)
+                print(error.localizedDescription)
             }
         }
         
-        let logout = requestFactory.makeLogoutRequestFactory()
-        logout.logout(userId: "123") { (response) in
-            switch response {
-            case .success(let logout):
-            print(logout)
-            case .failure(let error):
-            print(error)
-            }
-        }
-        
-        let changeUser = requestFactory.makeChangeUserFactory()
-        changeUser.changeUser(idUser: "123", username: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { (response) in
-            switch response {
-            case .success(let changeUser):
-                print(changeUser)
-            case .failure(let error):
-                print(error)
-            }
-        }
-        
+//        let logout = requestFactory.makeLogoutRequestFactory()
+//        logout.logout(userId: "123") { (response) in
+//            switch response {
+//            case .success(let logout):
+//            print(logout)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+//        
+//        let changeUser = requestFactory.makeChangeUserFactory()
+//        changeUser.changeUser(idUser: "123", username: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { (response) in
+//            switch response {
+//            case .success(let changeUser):
+//                print(changeUser)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+//        
         
         return true
     }

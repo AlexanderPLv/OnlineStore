@@ -9,7 +9,7 @@ import Foundation
 
 struct LogoutResouce: RequestRouter {
     var host  : BaseURL = .apiRequest
-    var method: Path = .logout
+    var path: Path = .logout
     var userId: String
     var fields: [URLQueryItem] {
         [URLQueryItem(name: "id_user", value: userId)]

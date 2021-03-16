@@ -9,7 +9,7 @@ import Foundation
 
 struct ChangeUserResource: RequestRouter {
     let host: BaseURL = .apiRequest
-    let method: Path = .changeUserData
+    let path: Path = .changeUserData
     let idUser: String
     let username: String
     let password: String

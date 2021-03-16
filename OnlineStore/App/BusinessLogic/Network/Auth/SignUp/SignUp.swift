@@ -37,6 +37,8 @@ extension SignUp: SignUpRequestFactory {
                                       gender: gender,
                                       creditCard: creditCard,
                                       bio: bio)
+        
+        print(resource.url)
         request(resource.url, withCompletion: completionHandler)
     }
 

@@ -25,6 +25,8 @@ extension AbstractRequestFactory {
                 completion(.failure(NetworkingError.badData))
                 return
             }
+            let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+                        print(json)
             do {
               let value = try self.serializer.decode(data)
                 completion(.success(value))
