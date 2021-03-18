@@ -10,26 +10,24 @@ import Foundation
 struct ChangeUserResource: EndPointType {
     typealias ModelType = IsSuccess
     var httpMethod: HTTPMethod = .post
-    
-    let host: BaseURL = .apiRequest
-    let path: Path = .changeUserData
-    let idUser: String
-    let username: String
-    let password: String
-    let email: String
-    let gender: String
+    let host      : BaseURL = .apiRequest
+    let path      : Path = .changeUserData
+    let userId    : Int
+    let username  : String
+    let password  : String
+    let email     : String
+    let gender    : String
     let creditCard: String
-    let bio: String
-    var parameters: Parameters = [:]
-    var fields: [URLQueryItem] {
+    let bio       : String
+    var parameters: Parameters {
         [
-            URLQueryItem(name: "id_user", value: idUser),
-            URLQueryItem(name: "username", value: username),
-            URLQueryItem(name: "password", value: password),
-            URLQueryItem(name: "email", value: email),
-            URLQueryItem(name: "gender", value: gender),
-            URLQueryItem(name: "credit_card", value: creditCard),
-            URLQueryItem(name: "bio", value: bio)
+      "userId"    : userId,
+      "username"  : username,
+      "password"  : password,
+      "email"     : email,
+      "gender"    : gender,
+      "creditCard": creditCard,
+      "bio"       : bio
         ]
     }
 }

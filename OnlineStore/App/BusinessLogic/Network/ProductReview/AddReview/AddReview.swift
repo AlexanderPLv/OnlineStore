@@ -1,15 +1,13 @@
 //
-//  Auth.swift
+//  AddReview.swift
 //  OnlineStore
 //
-//  Created by Alexander Pelevinov on 12.02.2021.
+//  Created by Alexander Pelevinov on 18.03.2021.
 //
 
 import Foundation
 
-
-
-class SignIn {
+class AddProductReview {
     let sessionManager: URLSession
     let serializer: DecodableSerializer<EndPoint.ModelType>
     let encoder: ParameterEncoder
@@ -23,18 +21,15 @@ class SignIn {
     }
 }
 
-extension SignIn: AbstractRequestFactory {
-    
-    typealias EndPoint = SignInResource
-    
-    
+extension AddProductReview: AbstractRequestFactory {
+    typealias EndPoint = AddReviewResource
     func request(withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {}
 }
 
-extension SignIn: SignInRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
-        let route = SignInResource(login: userName, password: password)
+extension AddProductReview: AddReviewRequestFactory {
+    func addReview(userName: String, ratingValue: Int, text: String, completionHandler: @escaping (Result<IsSuccess, NetworkingError>) -> Void) {
+        let route = AddReviewResource(userName: userName, ratingValue: ratingValue, text: text)
         request(route, withCompletion: completionHandler)
     }
-    
+
 }

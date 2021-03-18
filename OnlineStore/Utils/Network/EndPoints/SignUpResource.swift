@@ -12,7 +12,7 @@ struct SignUpResource: EndPointType {
     typealias ModelType = RegisterUser
     var host      : BaseURL = .apiRequest
     var path      : Path = .signUp
-    let idUser    : Int
+    let userId    : Int
     let userName  : String
     let password  : String
     let email     : String
@@ -21,13 +21,14 @@ struct SignUpResource: EndPointType {
     let bio       : String
     var httpMethod: HTTPMethod = .post
     var parameters: Parameters {
-        [ "id_user" : idUser,
-          "username": userName,
-          "password": password,
-          "email": email,
-          "gender": gender,
-          "credit_card": creditCard,
-          "bio": bio
+        [
+          "userId"   : userId,
+          "username" : userName,
+          "password" : password,
+          "email"    : email,
+          "gender"   : gender,
+          "creditCard": creditCard,
+          "bio"      : bio
         ]
     }
     

@@ -18,12 +18,14 @@ protocol AbstractRequestFactory: AnyObject {
 
 extension AbstractRequestFactory {
     
-    func request(_ route: EndPoint, parameters: Parameters?, withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
+    func request(_ route: EndPoint,
+                 withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
         
         do {
-            let request = try self.buildRequest(from: route, parameters: parameters)
-            
-            let task = sessionManager.dataTask(with: request, completionHandler: { (data: Data?, response: URLResponse?, error: Error?) -> Void in
+            let request = try self.buildRequest(from: route)
+            print(request.url)
+            let task = sessionManager.dataTask(with: request, completionHandler: {
+                (data: Data?, response: URLResponse?, error: Error?) -> Void in
                        if error != nil {
                            completion(.failure(NetworkingError.invalidRequest))
                        }
@@ -31,7 +33,8 @@ extension AbstractRequestFactory {
                            completion(.failure(NetworkingError.badData))
                            return
                        }
-            
+                let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+                print(json)
                 do {
                          let value = try self.serializer.decode(data)
                            completion(.success(value))
@@ -40,22 +43,19 @@ extension AbstractRequestFactory {
                        }
                    })
                    task.resume()
-            
-            
         } catch {
             completion(.failure(NetworkingError.invalidRequest))
         }
-        
         }
     
-    fileprivate func buildRequest(from route: EndPoint, parameters: Parameters?) throws -> URLRequest {
-        var request = URLRequest(url: route.url, cachePolicy: .reloadIgnoringLocalAndRemoteCacheData, timeoutInterval: 10.0)
+    fileprivate func buildRequest(from route: EndPoint) throws -> URLRequest {
+        var request = URLRequest(url: route.url,
+                                 cachePolicy: .reloadIgnoringLocalAndRemoteCacheData,
+                                 timeoutInterval: 10.0)
         request.httpMethod = route.httpMethod.rawValue
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        guard let parameters = parameters
-        else { return request }
         do {
-            try encoder.encode(urlRequest: &request, with: parameters)
+            try encoder.encode(urlRequest: &request, with: route.parameters)
         } catch {
             throw NetworkingError.encodingFailed
         }

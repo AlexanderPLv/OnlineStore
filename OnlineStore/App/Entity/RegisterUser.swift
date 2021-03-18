@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RegisterUser: Decodable {
+struct RegisterUser: Codable {
     let result: Int
     let userMessage: String?
     let errorMessage: String?

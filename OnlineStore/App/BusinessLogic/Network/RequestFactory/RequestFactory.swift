@@ -28,14 +28,29 @@ class RequestFactory {
         return SignUp(serializer: serializer, encoder: encoder, sessionManager: commonSession)
     }
     
-//    func makeLogoutRequestFactory() -> LogoutRequestFactory {
-//        let serializer = DecodableSerializer<IsSuccess>()
-//        return Logout(serializer: serializer, sessionManager: commonSession)
-//    }
+    func makeLogoutRequestFactory() -> LogoutRequestFactory {
+        let serializer = DecodableSerializer<IsSuccess>()
+        let encoder = JSONParameterEncoder()
+        return Logout(serializer: serializer, encoder: encoder, sessionManager: commonSession)
+    }
     
-//    func makeChangeUserFactory() -> ChangeUserFactory {
-//        let serializer = DecodableSerializer<IsSuccess>()
-//        return ChangeUser(serializer: serializer, sessionManager: commonSession)
-//    }
-//
+    func makeChangeUserFactory() -> ChangeUserFactory {
+        let serializer = DecodableSerializer<IsSuccess>()
+        let encoder = JSONParameterEncoder()
+        return ChangeUser(serializer: serializer, encoder: encoder, sessionManager: commonSession)
+    }
+    
+    func makeReviewRequestFactory() -> ReviewRequestFactory {
+        let serializer = DecodableSerializer<Review>()
+        let encoder = URLPathParameterEncoder()
+        return ProductReview(serializer: serializer, encoder: encoder, sessionManager: commonSession)
+    }
+    
+    func makeAddReviewRequestFactory() -> AddReviewRequestFactory {
+        let serializer = DecodableSerializer<IsSuccess>()
+        let encoder = JSONParameterEncoder()
+        return AddProductReview(serializer: serializer, encoder: encoder, sessionManager: commonSession)
+    }
+
+    
 }

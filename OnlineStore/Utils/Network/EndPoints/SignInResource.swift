@@ -16,8 +16,8 @@ struct SignInResource: EndPointType {
     var httpMethod: HTTPMethod = .post
     var parameters: Parameters {
         [
-            "login": login,
-            "password": password
+        "login"   : login,
+        "password": password
         ]
     }
     

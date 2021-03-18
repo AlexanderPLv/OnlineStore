@@ -7,6 +7,7 @@
 
 import Foundation
 
-struct IsSuccess: Decodable {
+struct IsSuccess: Codable {
     let result: Int
+    let userMessage: String
 }

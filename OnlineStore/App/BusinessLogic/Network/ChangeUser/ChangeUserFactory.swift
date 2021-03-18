@@ -8,7 +8,7 @@
 import Foundation
 
 protocol ChangeUserFactory {
-    func changeUser(idUser: String,
+    func changeUser(userId: Int,
                 username: String,
                 password: String,
                 email: String,

@@ -28,11 +28,11 @@ extension SignUp: AbstractRequestFactory {
 }
 
 extension SignUp: SignUpRequestFactory {
-    func signUp(idUser: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
+    func signUp(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
         
-        let route = SignUpResource(idUser: idUser, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
+        let route = SignUpResource(userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
 
-        request(route, parameters: route.parameters, withCompletion: completionHandler)
+        request(route, withCompletion: completionHandler)
     }
 
     

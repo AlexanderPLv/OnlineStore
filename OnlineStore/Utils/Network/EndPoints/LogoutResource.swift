@@ -10,12 +10,13 @@ import Foundation
 struct LogoutResouce: EndPointType {
     typealias ModelType = IsSuccess
     var httpMethod: HTTPMethod = .post
-    
-    var host  : BaseURL = .apiRequest
-    var path: Path = .logout
-    var userId: String
-    var parameters: Parameters = [:]
-    var fields: [URLQueryItem] {
-        [URLQueryItem(name: "id_user", value: userId)]
+    var host      : BaseURL = .apiRequest
+    var path      : Path = .logout
+    var userId    : Int
+    var parameters: Parameters {
+        [
+          "userId": userId
+        ]
     }
+    
 }

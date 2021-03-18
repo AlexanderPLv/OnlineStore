@@ -14,28 +14,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        let signIn = requestFactory.makeSignInRequestFactory()
-        signIn.login(userName: "Somebody", password: "mypassword") { (response) in
+        let reviewRequest = requestFactory.makeReviewRequestFactory()
+        reviewRequest.getReview(productId: "2222") { (response) in
             switch response {
-            case .success(let login):
-                print(login)
+            case .success(let review):
+                print(review)
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
         
-        let signUp = requestFactory.makeSignUpRequestFactory()
-        signUp.signUp(idUser: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { (response) in
+        let reviewPost = requestFactory.makeAddReviewRequestFactory()
+        reviewPost.addReview(userName: "Alex", ratingValue: 10, text: "some text") { (response) in
             switch response {
-            case .success(let signUp):
-                print(signUp)
+            case .success(let result):
+            print(result)
             case .failure(let error):
                 print(error.localizedDescription)
             }
         }
         
+        
+//        let signIn = requestFactory.makeSignInRequestFactory()
+//        signIn.login(userName: "Somebody", password: "mypassword") { (response) in
+//            switch response {
+//            case .success(let login):
+//                print(login)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+//
+//        let signUp = requestFactory.makeSignUpRequestFactory()
+//        signUp.signUp(userId: 123, userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { (response) in
+//            switch response {
+//            case .success(let signUp):
+//                print(signUp)
+//            case .failure(let error):
+//                print(error.localizedDescription)
+//            }
+//        }
+//
 //        let logout = requestFactory.makeLogoutRequestFactory()
-//        logout.logout(userId: "123") { (response) in
+//        logout.logout(userId: 123) { (response) in
 //            switch response {
 //            case .success(let logout):
 //            print(logout)
@@ -43,9 +64,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                print(error.localizedDescription)
 //            }
 //        }
-//        
+//
 //        let changeUser = requestFactory.makeChangeUserFactory()
-//        changeUser.changeUser(idUser: "123", username: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { (response) in
+//        changeUser.changeUser(userId: 123, username: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", creditCard: "9872389-2424-234224-234", bio: "This is good! I think I will switch to another language") { (response) in
 //            switch response {
 //            case .success(let changeUser):
 //                print(changeUser)
@@ -53,7 +74,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //                print(error.localizedDescription)
 //            }
 //        }
-//        
+        
+        
+        
         
         return true
     }
