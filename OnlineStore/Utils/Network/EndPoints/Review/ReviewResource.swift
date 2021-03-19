@@ -10,7 +10,7 @@ import Foundation
 struct ReviewResource: EndPointType {
     typealias ModelType = Review
     let host      : BaseURL = .apiRequest
-    let path      : Path = .getReview
+    let path      : Path = .review
     let httpMethod: HTTPMethod = .get
     let productId : String
     var parameters: Parameters {

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol SignInRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (Result<LoginResult, NetworkingError>) -> Void)
+    func login(userName: String, password: String, completionHandler: @escaping (Result<[LoginResult], NetworkingError>) -> Void)
 }

@@ -8,5 +8,5 @@
 import Foundation
 
 protocol LogoutRequestFactory {
-    func logout(userId: Int, completion: @escaping (Result<IsSuccess, NetworkingError>) -> Void)
+    func logout(userId: Int, completion: @escaping (Result<[IsSuccess], NetworkingError>) -> Void)
 }

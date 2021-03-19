@@ -44,9 +44,7 @@ enum Path {
     case signUp
     case logout
     case changeUserData
-    case getReview
-    case addReview
-    case deleteReview
+    case review
 }
 extension Path {
     var path: String {
@@ -59,12 +57,8 @@ extension Path {
             return "/logout"
         case .changeUserData:
             return "/changeUserData"
-        case .getReview:
+        case .review:
             return "/review"
-        case .addReview:
-            return "/addReview"
-        case .deleteReview:
-            return "/deleteReview"
         }
     }
 }

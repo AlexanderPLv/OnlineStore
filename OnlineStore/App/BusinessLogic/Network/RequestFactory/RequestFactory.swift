@@ -46,11 +46,15 @@ class RequestFactory {
         return ProductReview(serializer: serializer, encoder: encoder, sessionManager: commonSession)
     }
     
-    func makeAddReviewRequestFactory() -> AddReviewRequestFactory {
+    func makePostReviewRequestFactory() -> PostReviewRequestFactory {
         let serializer = DecodableSerializer<IsSuccess>()
         let encoder = JSONParameterEncoder()
-        return AddProductReview(serializer: serializer, encoder: encoder, sessionManager: commonSession)
+        return PostReview(serializer: serializer, encoder: encoder, sessionManager: commonSession)
     }
 
-    
+    func makeDeleteReviewRequestFactory() -> DeleteReviewRequestFactory {
+        let serializer = DecodableSerializer<IsSuccess>()
+        let encoder = URLPathParameterEncoder()
+        return DeleteReview(serializer: serializer, encoder: encoder, sessionManager: commonSession)
+    }
 }

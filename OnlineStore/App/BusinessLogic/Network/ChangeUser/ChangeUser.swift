@@ -25,11 +25,11 @@ extension ChangeUser: AbstractRequestFactory {
     typealias EndPoint = ChangeUserResource
     
     
-    func request(withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {}
+    func request(withCompletion completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {}
 }
 
 extension ChangeUser: ChangeUserFactory {
-    func changeUser(userId: Int, username: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
+    func changeUser(userId: Int, username: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {
         let route = ChangeUserResource(userId: userId,
                                       username: username,
                                       password: password,

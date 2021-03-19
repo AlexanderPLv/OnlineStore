@@ -9,7 +9,7 @@ import Foundation
 
 struct ChangeUserResource: EndPointType {
     typealias ModelType = IsSuccess
-    var httpMethod: HTTPMethod = .post
+    let httpMethod: HTTPMethod = .post
     let host      : BaseURL = .apiRequest
     let path      : Path = .changeUserData
     let userId    : Int

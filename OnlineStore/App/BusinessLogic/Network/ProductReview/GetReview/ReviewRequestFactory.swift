@@ -8,5 +8,5 @@
 import Foundation
 
 protocol ReviewRequestFactory {
-    func getReview(productId: String, completionHandler: @escaping (Result<Review, NetworkingError>) -> Void)
+    func getReview(productId: String, completionHandler: @escaping (Result<[Review], NetworkingError>) -> Void)
 }

@@ -28,11 +28,11 @@ extension SignIn: AbstractRequestFactory {
     typealias EndPoint = SignInResource
     
     
-    func request(withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {}
+    func request(withCompletion completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {}
 }
 
 extension SignIn: SignInRequestFactory {
-    func login(userName: String, password: String, completionHandler: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
+    func login(userName: String, password: String, completionHandler: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {
         let route = SignInResource(login: userName, password: password)
         request(route, withCompletion: completionHandler)
     }

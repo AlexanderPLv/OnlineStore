@@ -23,11 +23,11 @@ class ProductReview {
 
 extension ProductReview: AbstractRequestFactory {
     typealias EndPoint = ReviewResource
-    func request(withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {}
+    func request(withCompletion completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {}
 }
 
 extension ProductReview: ReviewRequestFactory {
-    func getReview(productId: String, completionHandler: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
+    func getReview(productId: String, completionHandler: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {
         let route = ReviewResource(productId: productId)
         request(route, withCompletion: completionHandler)
     }

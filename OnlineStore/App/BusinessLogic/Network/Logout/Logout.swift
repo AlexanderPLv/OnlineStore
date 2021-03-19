@@ -25,11 +25,11 @@ extension Logout: AbstractRequestFactory {
     typealias EndPoint = LogoutResouce
     
     
-    func request(withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {}
+    func request(withCompletion completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {}
 }
 
 extension Logout: LogoutRequestFactory {
-    func logout(userId: Int, completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
+    func logout(userId: Int, completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {
         let route = LogoutResouce(userId: userId)
         request(route, withCompletion: completion)
     }

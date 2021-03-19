@@ -13,17 +13,16 @@ protocol AbstractRequestFactory: AnyObject {
     var sessionManager      : URLSession { get }
     var serializer          : DecodableSerializer<EndPoint.ModelType> { get }
     var encoder             : ParameterEncoder { get }
-    func request(withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void)
+    func request(withCompletion completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void)
 }
 
 extension AbstractRequestFactory {
     
     func request(_ route: EndPoint,
-                 withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
+                 withCompletion completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {
         
         do {
             let request = try self.buildRequest(from: route)
-            print(request.url)
             let task = sessionManager.dataTask(with: request, completionHandler: {
                 (data: Data?, response: URLResponse?, error: Error?) -> Void in
                        if error != nil {
@@ -33,8 +32,8 @@ extension AbstractRequestFactory {
                            completion(.failure(NetworkingError.badData))
                            return
                        }
-                let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
-                print(json)
+//                let json = try? JSONSerialization.jsonObject(with: data, options: JSONSerialization.ReadingOptions.allowFragments)
+//                print(json ?? "enable to parse data")
                 do {
                          let value = try self.serializer.decode(data)
                            completion(.success(value))

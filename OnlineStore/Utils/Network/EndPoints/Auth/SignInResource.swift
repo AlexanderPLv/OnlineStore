@@ -9,11 +9,11 @@ import Foundation
 
 struct SignInResource: EndPointType {
     typealias ModelType = LoginResult
-    var host      : BaseURL = .apiRequest
-    var path      : Path = .signIn
+    let host      : BaseURL = .apiRequest
+    let path      : Path = .signIn
     let login     : String
     let password  : String
-    var httpMethod: HTTPMethod = .post
+    let httpMethod: HTTPMethod = .post
     var parameters: Parameters {
         [
         "login"   : login,

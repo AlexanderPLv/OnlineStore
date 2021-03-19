@@ -10,8 +10,8 @@ import Foundation
 struct SignUpResource: EndPointType {
     
     typealias ModelType = RegisterUser
-    var host      : BaseURL = .apiRequest
-    var path      : Path = .signUp
+    let host      : BaseURL = .apiRequest
+    let path      : Path = .signUp
     let userId    : Int
     let userName  : String
     let password  : String
@@ -19,7 +19,7 @@ struct SignUpResource: EndPointType {
     let gender    : String
     let creditCard: String
     let bio       : String
-    var httpMethod: HTTPMethod = .post
+    let httpMethod: HTTPMethod = .post
     var parameters: Parameters {
         [
           "userId"   : userId,

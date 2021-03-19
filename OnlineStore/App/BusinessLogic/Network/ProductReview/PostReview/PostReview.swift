@@ -7,7 +7,7 @@
 
 import Foundation
 
-class AddProductReview {
+class PostReview {
     let sessionManager: URLSession
     let serializer: DecodableSerializer<EndPoint.ModelType>
     let encoder: ParameterEncoder
@@ -21,14 +21,14 @@ class AddProductReview {
     }
 }
 
-extension AddProductReview: AbstractRequestFactory {
-    typealias EndPoint = AddReviewResource
-    func request(withCompletion completion: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {}
+extension PostReview: AbstractRequestFactory {
+    typealias EndPoint = PostReviewResource
+    func request(withCompletion completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {}
 }
 
-extension AddProductReview: AddReviewRequestFactory {
-    func addReview(userName: String, ratingValue: Int, text: String, completionHandler: @escaping (Result<IsSuccess, NetworkingError>) -> Void) {
-        let route = AddReviewResource(userName: userName, ratingValue: ratingValue, text: text)
+extension PostReview: PostReviewRequestFactory {
+    func addReview(userName: String, ratingValue: Int, text: String, completionHandler: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {
+        let route = PostReviewResource(userName: userName, ratingValue: ratingValue, text: text)
         request(route, withCompletion: completionHandler)
     }
 

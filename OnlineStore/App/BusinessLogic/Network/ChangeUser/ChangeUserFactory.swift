@@ -15,5 +15,5 @@ protocol ChangeUserFactory {
                 gender: String,
                 creditCard: String,
                 bio: String,
-                completionHandler: @escaping (Result<IsSuccess, NetworkingError>) -> Void)
+                completionHandler: @escaping (Result<[IsSuccess], NetworkingError>) -> Void)
 }

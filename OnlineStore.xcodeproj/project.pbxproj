@@ -23,6 +23,8 @@
 		C96BE5C425DD59B300B6325E /* RegisterUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5C325DD59B300B6325E /* RegisterUser.swift */; };
 		C96BE5C925DD5AB600B6325E /* SignUpResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C96BE5C825DD5AB600B6325E /* SignUpResource.swift */; };
 		C977F51E25DA71DB0045ABEF /* SignInResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C977F51D25DA71DB0045ABEF /* SignInResource.swift */; };
+		C97BA7BB2604A9CD0076F163 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97BA7BA2604A9CD0076F163 /* Wrapper.swift */; };
+		C97BA7C02604ABE30076F163 /* DeleteReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C97BA7BF2604ABE30076F163 /* DeleteReviewRequestFactory.swift */; };
 		C98A573325DFA56F007456F6 /* Logout.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A573225DFA56F007456F6 /* Logout.swift */; };
 		C98A573825DFA583007456F6 /* LogoutRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A573725DFA583007456F6 /* LogoutRequestFactory.swift */; };
 		C98A573D25DFA817007456F6 /* LogoutResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C98A573C25DFA817007456F6 /* LogoutResource.swift */; };
@@ -43,11 +45,10 @@
 		C9F43053260348C4001F8FB6 /* URLPathParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F43052260348C4001F8FB6 /* URLPathParameterEncoder.swift */; };
 		C9F4305926034BF5001F8FB6 /* ProductReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F4305826034BF5001F8FB6 /* ProductReview.swift */; };
 		C9F4305E26034C1A001F8FB6 /* ReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F4305D26034C1A001F8FB6 /* ReviewRequestFactory.swift */; };
-		C9F430692603588E001F8FB6 /* AddReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F430682603588E001F8FB6 /* AddReviewRequestFactory.swift */; };
-		C9F4306E260358A1001F8FB6 /* AddReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F4306D260358A1001F8FB6 /* AddReview.swift */; };
-		C9F43073260358BB001F8FB6 /* DeleteReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F43072260358BB001F8FB6 /* DeleteReviewRequestFactory.swift */; };
+		C9F430692603588E001F8FB6 /* PostReviewRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F430682603588E001F8FB6 /* PostReviewRequestFactory.swift */; };
+		C9F4306E260358A1001F8FB6 /* PostReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F4306D260358A1001F8FB6 /* PostReview.swift */; };
 		C9F43078260358CB001F8FB6 /* DeleteReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F43077260358CB001F8FB6 /* DeleteReview.swift */; };
-		C9F4307D260359AA001F8FB6 /* AddReviewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F4307C260359AA001F8FB6 /* AddReviewResource.swift */; };
+		C9F4307D260359AA001F8FB6 /* PostReviewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F4307C260359AA001F8FB6 /* PostReviewResource.swift */; };
 		C9F43082260359BE001F8FB6 /* DeleteReviewResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9F43081260359BE001F8FB6 /* DeleteReviewResource.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,8 @@
 		C96BE5C325DD59B300B6325E /* RegisterUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterUser.swift; sourceTree = "<group>"; };
 		C96BE5C825DD5AB600B6325E /* SignUpResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpResource.swift; sourceTree = "<group>"; };
 		C977F51D25DA71DB0045ABEF /* SignInResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResource.swift; sourceTree = "<group>"; };
+		C97BA7BA2604A9CD0076F163 /* Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
+		C97BA7BF2604ABE30076F163 /* DeleteReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteReviewRequestFactory.swift; sourceTree = "<group>"; };
 		C98A573225DFA56F007456F6 /* Logout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logout.swift; sourceTree = "<group>"; };
 		C98A573725DFA583007456F6 /* LogoutRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutRequestFactory.swift; sourceTree = "<group>"; };
 		C98A573C25DFA817007456F6 /* LogoutResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutResource.swift; sourceTree = "<group>"; };
@@ -111,11 +114,10 @@
 		C9F43052260348C4001F8FB6 /* URLPathParameterEncoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLPathParameterEncoder.swift; sourceTree = "<group>"; };
 		C9F4305826034BF5001F8FB6 /* ProductReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductReview.swift; sourceTree = "<group>"; };
 		C9F4305D26034C1A001F8FB6 /* ReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequestFactory.swift; sourceTree = "<group>"; };
-		C9F430682603588E001F8FB6 /* AddReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewRequestFactory.swift; sourceTree = "<group>"; };
-		C9F4306D260358A1001F8FB6 /* AddReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReview.swift; sourceTree = "<group>"; };
-		C9F43072260358BB001F8FB6 /* DeleteReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DeleteReviewRequestFactory.swift; path = OnlineStore/App/BusinessLogic/Network/ProductReview/AddReview/DeleteReviewRequestFactory.swift; sourceTree = SOURCE_ROOT; };
+		C9F430682603588E001F8FB6 /* PostReviewRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReviewRequestFactory.swift; sourceTree = "<group>"; };
+		C9F4306D260358A1001F8FB6 /* PostReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReview.swift; sourceTree = "<group>"; };
 		C9F43077260358CB001F8FB6 /* DeleteReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteReview.swift; sourceTree = "<group>"; };
-		C9F4307C260359AA001F8FB6 /* AddReviewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewResource.swift; sourceTree = "<group>"; };
+		C9F4307C260359AA001F8FB6 /* PostReviewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostReviewResource.swift; sourceTree = "<group>"; };
 		C9F43081260359BE001F8FB6 /* DeleteReviewResource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteReviewResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -223,6 +225,7 @@
 				C96BE5C325DD59B300B6325E /* RegisterUser.swift */,
 				C96AFCC425DEC55600161374 /* IsSuccess.swift */,
 				C9F4304826034429001F8FB6 /* Review.swift */,
+				C97BA7BA2604A9CD0076F163 /* Wrapper.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -330,15 +333,39 @@
 		C977F51C25DA71B50045ABEF /* EndPoints */ = {
 			isa = PBXGroup;
 			children = (
+				C97BA7C72604B5D30076F163 /* Auth */,
+				C97BA7CC2604B6170076F163 /* ChangeUserData */,
+				C97BA7C82604B5FC0076F163 /* Review */,
+			);
+			path = EndPoints;
+			sourceTree = "<group>";
+		};
+		C97BA7C72604B5D30076F163 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
 				C977F51D25DA71DB0045ABEF /* SignInResource.swift */,
 				C96BE5C825DD5AB600B6325E /* SignUpResource.swift */,
 				C98A573C25DFA817007456F6 /* LogoutResource.swift */,
-				C98A574C25DFAEE6007456F6 /* ChangeUserResource.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		C97BA7C82604B5FC0076F163 /* Review */ = {
+			isa = PBXGroup;
+			children = (
 				C9F4304D260346DE001F8FB6 /* ReviewResource.swift */,
-				C9F4307C260359AA001F8FB6 /* AddReviewResource.swift */,
+				C9F4307C260359AA001F8FB6 /* PostReviewResource.swift */,
 				C9F43081260359BE001F8FB6 /* DeleteReviewResource.swift */,
 			);
-			path = EndPoints;
+			path = Review;
+			sourceTree = "<group>";
+		};
+		C97BA7CC2604B6170076F163 /* ChangeUserData */ = {
+			isa = PBXGroup;
+			children = (
+				C98A574C25DFAEE6007456F6 /* ChangeUserResource.swift */,
+			);
+			path = ChangeUserData;
 			sourceTree = "<group>";
 		};
 		C98A573125DFA553007456F6 /* Logout */ = {
@@ -397,7 +424,7 @@
 			isa = PBXGroup;
 			children = (
 				C9F4306726035858001F8FB6 /* DeleteReview */,
-				C9F430662603584A001F8FB6 /* AddReview */,
+				C9F430662603584A001F8FB6 /* PostReview */,
 				C9F4306526035830001F8FB6 /* GetReview */,
 			);
 			path = ProductReview;
@@ -412,20 +439,20 @@
 			path = GetReview;
 			sourceTree = "<group>";
 		};
-		C9F430662603584A001F8FB6 /* AddReview */ = {
+		C9F430662603584A001F8FB6 /* PostReview */ = {
 			isa = PBXGroup;
 			children = (
-				C9F430682603588E001F8FB6 /* AddReviewRequestFactory.swift */,
-				C9F4306D260358A1001F8FB6 /* AddReview.swift */,
+				C9F430682603588E001F8FB6 /* PostReviewRequestFactory.swift */,
+				C9F4306D260358A1001F8FB6 /* PostReview.swift */,
 			);
-			path = AddReview;
+			path = PostReview;
 			sourceTree = "<group>";
 		};
 		C9F4306726035858001F8FB6 /* DeleteReview */ = {
 			isa = PBXGroup;
 			children = (
-				C9F43072260358BB001F8FB6 /* DeleteReviewRequestFactory.swift */,
 				C9F43077260358CB001F8FB6 /* DeleteReview.swift */,
+				C97BA7BF2604ABE30076F163 /* DeleteReviewRequestFactory.swift */,
 			);
 			path = DeleteReview;
 			sourceTree = "<group>";
@@ -563,11 +590,12 @@
 				C9D95A5525D6756F00A99E48 /* LoginResult.swift in Sources */,
 				C9F43078260358CB001F8FB6 /* DeleteReview.swift in Sources */,
 				C98A574325DFAE3D007456F6 /* ChangeUser.swift in Sources */,
-				C9F430692603588E001F8FB6 /* AddReviewRequestFactory.swift in Sources */,
+				C9F430692603588E001F8FB6 /* PostReviewRequestFactory.swift in Sources */,
 				C969E38A25D2A28300916D5C /* ViewController.swift in Sources */,
 				C96AFCB525DEBF6000161374 /* SignUpRequestFactory.swift in Sources */,
 				C9D95A8725D67C1100A99E48 /* RequestFactory.swift in Sources */,
 				C969E38625D2A28300916D5C /* AppDelegate.swift in Sources */,
+				C97BA7BB2604A9CD0076F163 /* Wrapper.swift in Sources */,
 				C96AFCBA25DEBF8800161374 /* SignUp.swift in Sources */,
 				C9F4305E26034C1A001F8FB6 /* ReviewRequestFactory.swift in Sources */,
 				C9F43053260348C4001F8FB6 /* URLPathParameterEncoder.swift in Sources */,
@@ -580,20 +608,20 @@
 				C96AFC9725DE90E900161374 /* DecodableSerialazer.swift in Sources */,
 				C96BE5C925DD5AB600B6325E /* SignUpResource.swift in Sources */,
 				C9D95A5A25D6757A00A99E48 /* User.swift in Sources */,
-				C9F4307D260359AA001F8FB6 /* AddReviewResource.swift in Sources */,
+				C9F4307D260359AA001F8FB6 /* PostReviewResource.swift in Sources */,
 				C96A5B9125DBCDAA0020B120 /* AbstractRequestFactory.swift in Sources */,
 				C98A573325DFA56F007456F6 /* Logout.swift in Sources */,
 				C969E38825D2A28300916D5C /* SceneDelegate.swift in Sources */,
 				C977F51E25DA71DB0045ABEF /* SignInResource.swift in Sources */,
-				C9F43073260358BB001F8FB6 /* DeleteReviewRequestFactory.swift in Sources */,
 				C98A574825DFAE5E007456F6 /* ChangeUserFactory.swift in Sources */,
 				C96BE5C425DD59B300B6325E /* RegisterUser.swift in Sources */,
 				C9D95A8225D67A8800A99E48 /* SignIn.swift in Sources */,
+				C97BA7C02604ABE30076F163 /* DeleteReviewRequestFactory.swift in Sources */,
 				C9F4305926034BF5001F8FB6 /* ProductReview.swift in Sources */,
 				C98A574D25DFAEE6007456F6 /* ChangeUserResource.swift in Sources */,
 				C9EB7F762600EDAB00990EA0 /* JSONParameterEncoder.swift in Sources */,
 				C96AFCC525DEC55600161374 /* IsSuccess.swift in Sources */,
-				C9F4306E260358A1001F8FB6 /* AddReview.swift in Sources */,
+				C9F4306E260358A1001F8FB6 /* PostReview.swift in Sources */,
 				C96AFC7B25DE6BD200161374 /* NetworkingError.swift in Sources */,
 				C9F43082260359BE001F8FB6 /* DeleteReviewResource.swift in Sources */,
 				C98A573D25DFA817007456F6 /* LogoutResource.swift in Sources */,

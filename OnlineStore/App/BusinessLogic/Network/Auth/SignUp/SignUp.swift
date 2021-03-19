@@ -24,11 +24,11 @@ class SignUp {
 
 extension SignUp: AbstractRequestFactory {
     typealias EndPoint = SignUpResource
-    func request(withCompletion completion: @escaping (Result<RegisterUser, NetworkingError>) -> Void) { }
+    func request(withCompletion completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) { }
 }
 
 extension SignUp: SignUpRequestFactory {
-    func signUp(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (Result<EndPoint.ModelType, NetworkingError>) -> Void) {
+    func signUp(userId: Int, userName: String, password: String, email: String, gender: String, creditCard: String, bio: String, completionHandler: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {
         
         let route = SignUpResource(userId: userId, userName: userName, password: password, email: email, gender: gender, creditCard: creditCard, bio: bio)
 

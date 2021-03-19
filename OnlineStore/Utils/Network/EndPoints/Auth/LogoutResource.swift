@@ -9,10 +9,10 @@ import Foundation
 
 struct LogoutResouce: EndPointType {
     typealias ModelType = IsSuccess
-    var httpMethod: HTTPMethod = .post
-    var host      : BaseURL = .apiRequest
-    var path      : Path = .logout
-    var userId    : Int
+    let httpMethod: HTTPMethod = .post
+    let host      : BaseURL = .apiRequest
+    let path      : Path = .logout
+    let userId    : Int
     var parameters: Parameters {
         [
           "userId": userId
