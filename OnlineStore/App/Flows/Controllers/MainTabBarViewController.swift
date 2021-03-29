@@ -20,16 +20,22 @@ class MainTabBarViewController: UITabBarController{
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        if Session.shared.token == nil {
+                    DispatchQueue.main.async {
+                        let login = SignInViewController()
+                        login.modalPresentationStyle = .fullScreen
+                        self.present(login, animated: true, completion: nil)
+                    }
+                    return
+                }
     }
 
     func setupViewControllers() {
-
-
-
-        let signInController = templateNavController(systemImageString: "person.2.fill", rootViewController: SignInViewController())
-
+        let userProfileViewController = templateNavController(systemImageString: "person.crop.square",
+                                                              rootViewController: UserProfileController())
+        
         viewControllers = [
-            signInController
+            userProfileViewController
             ]
 
         guard let items = tabBar.items else { return }
@@ -38,13 +44,15 @@ class MainTabBarViewController: UITabBarController{
         }
     }
 
-    fileprivate func templateNavController(systemImageString: String, rootViewController: UIViewController = UIViewController()) -> CustomNavigationController {
+    fileprivate func templateNavController(systemImageString: String,
+                                           rootViewController: UIViewController = UIViewController()) -> CustomNavigationController {
         let viewController = rootViewController
         let navController = CustomNavigationController(rootViewController: viewController)
         navController.navigationBar.barTintColor = #colorLiteral(red: 0.9435791373, green: 0.6045697927, blue: 0.2109713256, alpha: 1)
         
         let imageConfig = UIImage.SymbolConfiguration(scale: .large)
-        let image = UIImage(systemName: systemImageString, withConfiguration: imageConfig)
+        let image = UIImage(systemName: systemImageString,
+                            withConfiguration: imageConfig)
         navController.tabBarItem.image = image
         
         return navController

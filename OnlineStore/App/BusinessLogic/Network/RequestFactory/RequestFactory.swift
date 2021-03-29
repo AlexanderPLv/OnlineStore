@@ -17,13 +17,13 @@ class RequestFactory {
     }()
     
     func makeSignInRequestFactory() -> SignInRequestFactory {
-        let serializer = DecodableSerializer<LoginResult>()
+        let serializer = DecodableSerializer<Token>()
         let encoder = JSONParameterEncoder()
         return SignIn(serializer: serializer, encoder: encoder, sessionManager: commonSession)
     }
     
     func makeSignUpRequestFactory() -> SignUpRequestFactory {
-        let serializer = DecodableSerializer<RegisterUser>()
+        let serializer = DecodableSerializer<IsSuccess>()
         let encoder = JSONParameterEncoder()
         return SignUp(serializer: serializer, encoder: encoder, sessionManager: commonSession)
     }
@@ -56,5 +56,11 @@ class RequestFactory {
         let serializer = DecodableSerializer<IsSuccess>()
         let encoder = URLPathParameterEncoder()
         return DeleteReview(serializer: serializer, encoder: encoder, sessionManager: commonSession)
+    }
+    
+    func makeGetUserDataFactory() -> GetUserDataFactory {
+        let serializer = DecodableSerializer<UserProfile>()
+        let encoder = JSONParameterEncoder()
+        return GetUserData(serializer: serializer, encoder: encoder, sessionManager: commonSession)
     }
 }

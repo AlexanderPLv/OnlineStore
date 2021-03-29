@@ -15,7 +15,6 @@ class SignUpViewController: UIViewController {
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        
         tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         
         return tf
@@ -27,7 +26,6 @@ class SignUpViewController: UIViewController {
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        
         tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         
         return tf
@@ -39,7 +37,6 @@ class SignUpViewController: UIViewController {
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        
         tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         
         return tf
@@ -51,7 +48,6 @@ class SignUpViewController: UIViewController {
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        
         tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         
         return tf
@@ -63,7 +59,6 @@ class SignUpViewController: UIViewController {
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        
         tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         
         return tf
@@ -75,7 +70,6 @@ class SignUpViewController: UIViewController {
         tf.backgroundColor = .white
         tf.borderStyle = .roundedRect
         tf.font = UIFont.systemFont(ofSize: 14)
-        
         tf.addTarget(self, action: #selector(handleTextInputChange), for: .editingChanged)
         
         return tf
@@ -101,13 +95,10 @@ class SignUpViewController: UIViewController {
         let button = UIButton(type: .system)
         button.setTitle("SIGN UP", for: .normal)
         button.backgroundColor = .lightGray
-        
         button.layer.cornerRadius = 5
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.setTitleColor(.white, for: .normal)
-        
         button.addTarget(self, action: #selector(handleSignUP), for: .touchUpInside)
-        
         button.isEnabled = false
         
         return button
@@ -130,14 +121,13 @@ class SignUpViewController: UIViewController {
             userNameTextField,
             passwordTextField,
             emailTextField,
-            genderTextField,
             creditCardTextField,
+            genderTextField,
             bioTextField,
             signUpButton
         ],
         spacing: 10)
         stackView.distribution = .fillEqually
-        
         view.addSubview(stackView)
         stackView.anchor(top: view.topAnchor, left: view.leftAnchor,
                          bottom: nil, right: view.rightAnchor,

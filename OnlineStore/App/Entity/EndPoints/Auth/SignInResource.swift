@@ -8,7 +8,7 @@
 import Foundation
 
 struct SignInResource: EndPointType {
-    typealias ModelType = LoginResult
+    typealias ModelType = Token
     let host      : BaseURL = .apiRequest
     let path      : Path = .signIn
     let login     : String

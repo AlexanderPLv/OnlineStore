@@ -9,7 +9,7 @@ import Foundation
 
 struct SignUpResource: EndPointType {
     
-    typealias ModelType = RegisterUser
+    typealias ModelType = IsSuccess
     let host      : BaseURL = .apiRequest
     let path      : Path = .signUp
     let userId    : Int

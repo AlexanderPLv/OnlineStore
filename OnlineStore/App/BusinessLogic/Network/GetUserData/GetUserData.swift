@@ -1,13 +1,13 @@
 //
-//  Logout.swift
+//  GetUserData.swift
 //  OnlineStore
 //
-//  Created by Alexander Pelevinov on 19.02.2021.
+//  Created by Alexander Pelevinov on 26.03.2021.
 //
 
 import Foundation
 
-class Logout {
+class GetUserData {
     let sessionManager: URLSession
     let serializer: DecodableSerializer<EndPoint.ModelType>
     let encoder: ParameterEncoder
@@ -15,23 +15,21 @@ class Logout {
         serializer: DecodableSerializer<EndPoint.ModelType>,
         encoder: ParameterEncoder,
         sessionManager: URLSession) {
-        self.serializer = serializer
         self.encoder = encoder
+        self.serializer = serializer
         self.sessionManager = sessionManager
     }
 }
 
-extension Logout: AbstractRequestFactory {
-    typealias EndPoint = LogoutResouce
+extension GetUserData: AbstractRequestFactory {
+    typealias EndPoint = UserDataResource
     func request(withCompletion completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {}
 }
 
-extension Logout: LogoutRequestFactory {
-    func logout(userId: Int, completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {
-        let route = LogoutResouce(userId: userId)
-        request(route, withCompletion: completion)
+extension GetUserData: GetUserDataFactory {
+    func getUserData(userId: Int, token: String, completionHandler: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {
+        let route = UserDataResource(userId: userId, token: token)
+        request(route, withCompletion: completionHandler)
     }
-    
-   
-    
+
 }

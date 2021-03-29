@@ -15,5 +15,5 @@ protocol SignUpRequestFactory {
                 gender: String,
                 creditCard: String,
                 bio: String,
-                completionHandler: @escaping (Result<[RegisterUser], NetworkingError>) -> Void)
+                completionHandler: @escaping (Result<[IsSuccess], NetworkingError>) -> Void)
 }

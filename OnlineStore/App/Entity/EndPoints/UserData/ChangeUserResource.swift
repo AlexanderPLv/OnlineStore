@@ -13,21 +13,11 @@ struct ChangeUserResource: EndPointType {
     let host      : BaseURL = .apiRequest
     let path      : Path = .changeUserData
     let userId    : Int
-    let username  : String
-    let password  : String
-    let email     : String
-    let gender    : String
-    let creditCard: String
-    let bio       : String
+    let token     : String
     var parameters: Parameters {
         [
       "userId"    : userId,
-      "username"  : username,
-      "password"  : password,
-      "email"     : email,
-      "gender"    : gender,
-      "creditCard": creditCard,
-      "bio"       : bio
+      "token"     : token
         ]
     }
 }

@@ -26,8 +26,6 @@ class SignIn {
 extension SignIn: AbstractRequestFactory {
     
     typealias EndPoint = SignInResource
-    
-    
     func request(withCompletion completion: @escaping (Result<[EndPoint.ModelType], NetworkingError>) -> Void) {}
 }
 

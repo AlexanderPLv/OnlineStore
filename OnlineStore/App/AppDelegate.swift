@@ -85,7 +85,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //            }
 //        }
 //        
-        
+        UINavigationBar.appearance().titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         
         
         return true

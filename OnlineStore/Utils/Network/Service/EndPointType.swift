@@ -45,6 +45,7 @@ enum Path {
     case logout
     case changeUserData
     case review
+    case getUserData
 }
 extension Path {
     var path: String {
@@ -59,6 +60,8 @@ extension Path {
             return "/changeUserData"
         case .review:
             return "/review"
+        case .getUserData:
+            return "/userdata"
         }
     }
 }

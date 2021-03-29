@@ -9,11 +9,6 @@ import Foundation
 
 protocol ChangeUserFactory {
     func changeUser(userId: Int,
-                username: String,
-                password: String,
-                email: String,
-                gender: String,
-                creditCard: String,
-                bio: String,
-                completionHandler: @escaping (Result<[IsSuccess], NetworkingError>) -> Void)
+                    token: String,
+                    completionHandler: @escaping (Result<[IsSuccess], NetworkingError>) -> Void)
 }
